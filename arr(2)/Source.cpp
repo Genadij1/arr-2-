@@ -23,8 +23,10 @@ int main() {
 	cout << "Second ARR: " << endl;
 	for (int i = 0; i < ROW2; i++) {
 		for (int k = 0; k < COL2; k++) {
-			arr2[i][k] = arr1[i][k] + arr1[i][k];
-			cout << arr2[i][k] << "\t";
+			if (i <= 9 && k <= 9) {
+				arr2[i][k] = arr1[i + i][k + k] + arr1[i + 1][k + 1];
+				cout << arr2[i][k] << "\t";
+			}
 		}
 		cout << endl;
 	}
